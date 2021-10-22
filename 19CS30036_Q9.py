@@ -9,7 +9,6 @@ np.random.seed(69)
 
 def generateData():  
 
-  # intialising vectors x and y with appropriate dimensions
   y = [0]*500
   x = np.random.normal(0, 5, size=(500,2))
 
@@ -100,12 +99,13 @@ def PlotVectors(T):
 
   # mapping the plot axes with appropriate values
   zG = zG.reshape(1000, 1000)
-  fig, ax = plt.subplots()
-  cs = ax.contourf(xG, yG, zG)
-  throwaway = fig.colorbar(cs)
+  figure, axis = plt.subplots()
+  CountourG = axis.contourf(xG, yG, zG)
+  throwaway = figure.colorbar(CountourG)
   
   # printing the desired plot
   print("Plot \n")
   plt.show()
 
 PlotVectors(T)
+
