@@ -15,11 +15,11 @@ def generateData():
   # storing the classified values in y
   for i in range(x.shape[0]):
 
-    if np.prod(x[i]) > -1:
-      y[i] = 1
+    if np.prod(x[i]) < 0:
+      y[i] = -1
 
     else:
-      y[i] = -1
+      y[i] = 1
 
   y=np.array(y)
 
