@@ -94,9 +94,6 @@ def PlotVectors(T):
   # storing 1, x1, x2, (x1)^2, (x2)^2, x1*x2 inside zG for all x1, x2
   zG = np.array([np.sign(np.array([1, i, j, i*j, i*i, j*j])@T) for j in yG for i in xG])
 
-  print("Z : \n")
-  print(zG.shape)
-
   # mapping the plot axes with appropriate values
   zG = zG.reshape(1000, 1000)
   figure, axis = plt.subplots()
@@ -108,4 +105,3 @@ def PlotVectors(T):
   plt.show()
 
 PlotVectors(T)
-
