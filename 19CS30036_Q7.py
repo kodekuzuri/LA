@@ -1,4 +1,4 @@
-#19CS30036
+ #19CS30036
 
 import numpy as np
 
@@ -48,11 +48,13 @@ def IterativeLeastSquare(N):
   print(f"||xLS - xLSiteration|| = { np.linalg.norm(LSx - x, 2) }")
 # end of function
 
+print("2-norm calculated for numerical convergence proof \n")
 # running the iterative function for 100 iterations
 IterativeLeastSquare( N = 100 )
 
-# running the iterative function for 1000 iterations
-IterativeLeastSquare( N = 1000 )
+print("Proof of convergence: The calculated gets more closer to the Least square solution for increasing number of iterations (the 2-norm difeerence decreases)\n")
+# running the iterative function for 500 iterations
+IterativeLeastSquare( N = 500 )
 
 # running the iterative function for 1000 iterations
-IterativeLeastSquare( N = 10000 ) 
+IterativeLeastSquare( N = 1000 ) 
