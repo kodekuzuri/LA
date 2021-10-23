@@ -1,3 +1,22 @@
+#(a)
+import numpy as np
+
+#(b)
+import numpy as np
+import matplotlib.pyplot as plt
+u, v = np.mgrid[0:2*np.pi:200j, 0:np.pi:100j]
+
+r = np.sqrt(1.0)
+
+x = -2*np.cos(u)*np.sin(v) + np.cos(v) + 2*np.sin(u)*np.sin(v)
+y = np.sin(u)*np.sin(v)
+
+fig, ax = plt.subplots(1)
+
+ax.plot(x, y)
+ax.set_aspect(1)
+plt.show()
+
 #(c)
 import numpy as np
 import matplotlib.pyplot as plt
