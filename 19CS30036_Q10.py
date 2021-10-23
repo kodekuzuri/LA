@@ -67,11 +67,6 @@ def ModelFit(train):
   print("Confusion Matrix:")
   print(CMatrix)
 
-  Z = pd.DataFrame(CMatrix, range(10), range(10))
-
-  # heatmap
-  sns.heatmap(Z, annot=True, annot_kws={"size": 7}) 
-
   return T
 
 def CMatrixPrediction(test, fit):
@@ -90,8 +85,6 @@ def CMatrixPrediction(test, fit):
   CMatrix = confusion_matrix(y, P)
   print(f"Confusion Matrix : \n {CMatrix} \n")
 
-  Z = pd.DataFrame(CMatrix, range(10), range(10))
-  sns.heatmap(Z, annot=True, annot_kws={"size": 7}) 
 
 TrainingDataset,TestDataset = GenerateDataset()
 fit=ModelFit(TrainingDataset)
