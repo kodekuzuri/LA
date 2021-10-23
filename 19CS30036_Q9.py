@@ -22,14 +22,7 @@ def generateData():
       y[i] = 1
 
   y=np.array(y)
-
-  # storing dataframe
-  Z = pd.DataFrame(x)
-  Z['y']=y
  
-  # plot
-  sns.scatterplot(data = Z, x = 0, y = 1, hue= "y", cmap = 'virdis')
-
   return x, y
 
 # function call to generate function 
@@ -71,12 +64,6 @@ def LeastSquare(x, y):
   CMatrix = confusion_matrix(fSOL, y)
   print(CMatrix)
 
-  # storing dataframe of Confusion Matrix
-  Z = pd.DataFrame(CMatrix, range(2), range(2))
-  
-  # printing heatmap 
-  sns.heatmap(Z, annot=True, annot_kws={"size": 14}) 
-
   return T
 
 T = LeastSquare(X, Y)
@@ -105,3 +92,4 @@ def PlotVectors(T):
   plt.show()
 
 PlotVectors(T)
+
