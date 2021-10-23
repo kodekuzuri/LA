@@ -1,2 +1,1 @@
-<h1> TO GENERATE SEPERATE HEATMAPS, COMMENT THE PLOT GENERATION PART IN OTHER FUNCTIONS FOR THE PROGRAM </h1>
-[for Q9, Q10]
+For PlotQ3.py, split the code for generation of plots for different subparts 
